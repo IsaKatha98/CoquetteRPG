@@ -6,20 +6,25 @@ public class BunnyMovement : MonoBehaviour
 {
     private float Horizontal;
     private float Vertical;
+    private Vector3 direction;
 
     public float Speed;
     public Animator animator;
 
     private void FixedUpdate()
     {
+        //get player input
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = new Vector3 (Horizontal, Vertical);
+        //create normalized vector of the direction
+        direction = new Vector3(Horizontal, Vertical, 0);
+
+        //move the player
+        transform.position += direction * Speed * Time.deltaTime;
 
         AnimateMovement(direction);
-
-        transform.position += direction * Speed * Time.deltaTime;
+  
     }
 
     void AnimateMovement(Vector3 direction)
