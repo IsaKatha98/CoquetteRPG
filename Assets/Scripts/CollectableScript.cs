@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class CollectableScript : MonoBehaviour
 {
-    //player walks into collectable
-    //add collectable to player
-    //delete collectable from the scene
+    public CollectableType type;
+    public Sprite icon;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,8 +13,13 @@ public class CollectableScript : MonoBehaviour
 
         if (player)
         {
-            player.numLetuceSeeds++;
+            player.inventory.Add(this);
             Destroy(this.gameObject);
         }
     }
+}
+
+public enum CollectableType
+{
+    NONE, LETUCE_SEED
 }
