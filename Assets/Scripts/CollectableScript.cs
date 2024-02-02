@@ -21,5 +21,5 @@ public class CollectableScript : MonoBehaviour
 
 public enum CollectableType
 {
-    NONE, LETUCE_SEED
+    NONE, LETUCE_SEED, SRAWBERRY_SEED, CARROT_SEED, CORN_SEED, APPLE_SEED
 }
