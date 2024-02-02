@@ -19,6 +19,8 @@ public class Door : MonoBehaviour
             animator.SetTrigger("isOpen");
             Debug.Log("Abrimos la puerta.");
 
+            Invoke("restartLevel", 1f);
+
         }
     }
 
@@ -27,7 +29,7 @@ public class Door : MonoBehaviour
     /// </summary>
     private void restartLevel()
     {
-        //SceneManager.LoadScene(SceneManager.GetSceneByName(Dungeon));
+        SceneManager.LoadScene(0);
 
     }
 }

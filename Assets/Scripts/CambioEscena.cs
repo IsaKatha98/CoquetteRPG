@@ -12,7 +12,7 @@ public class CambioEscena : MonoBehaviour
         {
             Debug.Log("Cambiando de escena");
             // Nos vamos a la siguiente escena
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
 
         }
 
