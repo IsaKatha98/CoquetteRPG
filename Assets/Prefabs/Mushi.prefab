@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6249005723071139416}
   - component: {fileID: 8450577210372284522}
   - component: {fileID: 3604460487418576545}
+  - component: {fileID: 6040586067439299404}
   m_Layer: 0
   m_Name: Pedrolo
   m_TagString: Untagged
@@ -28,10 +29,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.13999997, y: 0.025, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3985458371551143931}
+  m_Children: []
   m_Father: {fileID: 6176481964416795212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8450577210372284522
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!114 &3604460487418576545
 MonoBehaviour:
@@ -99,46 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHolding: {fileID: 5780739091244106444}
---- !u!1 &674004481104017904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3985458371551143931}
-  - component: {fileID: 4229511259376236235}
-  - component: {fileID: 1344730224538245842}
-  m_Layer: 0
-  m_Name: 'PedroloCollider '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3985458371551143931
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674004481104017904}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.070410684, y: -0.020929234, z: -0.3044955, w: 0.9496773}
-  m_LocalPosition: {x: -0.17, y: 0.078, z: -0.06}
-  m_LocalScale: {x: 1.0046397, y: 1.0127072, z: 0.92092466}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6249005723071139416}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.535}
---- !u!70 &4229511259376236235
+--- !u!70 &6040586067439299404
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674004481104017904}
+  m_GameObject: {fileID: 565248073274353076}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -164,21 +131,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.63955694, y: 0.12010425}
-  m_Size: {x: 1.1525521, y: 1.1478928}
-  m_Direction: 0
---- !u!114 &1344730224538245842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674004481104017904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee59fbb12b575d448aca88d32e22afe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: 0.104451835, y: 0.037982117}
+  m_Size: {x: 0.4248677, y: 0.4248677}
+  m_Direction: 1
 --- !u!1 &5780739091244106444
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,9 +309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bunny: {fileID: 0}
   animator: {fileID: 8287614206740475242}
-  health: 2
-  mushi: {fileID: 0}
-  triggerMushi: {fileID: 0}
+  health: 1
+  mushi: {fileID: 5780739091244106444}
 --- !u!95 &8287614206740475242
 Animator:
   serializedVersion: 5
