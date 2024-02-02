@@ -11,9 +11,11 @@ public class Inventory_ui : MonoBehaviour
 
     void Update()
     {
+        Refresh();
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
+            
         }
     }
 
@@ -22,7 +24,7 @@ public class Inventory_ui : MonoBehaviour
         if(!inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
-            Refresh();
+            
         }
         else
         {
